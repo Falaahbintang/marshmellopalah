@@ -1,0 +1,234 @@
+.root {
+  --primary: #284e7e;
+  --bg: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  /* background-color: var(--bg); */
+  color: rgb(0, 0, 0);
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #284e7e;
+  border-bottom: 1px solid #001858;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* tulisan marshmellow */
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* logo marshmellow */
+.navbar .navbar-logo span {
+  color: #000000;
+  font-size: 2rem;
+}
+
+/* warna navbar awal */
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
+}
+
+/* warna navbar setelah di arahkan */
+.navbar .navbar-nav a:hover {
+  color: #000000;
+}
+
+/* membuat garis bawah */
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.16rem solid #000000;
+  transform: scaleX(0);
+}
+
+/* menampilkan animasi garis bawah*/
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.2s linear;
+}
+/* bagian icon */
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0rem 0.2rem;
+}
+
+/* merubah warna icon */
+.navbar .navbar-extra a:hover {
+  color: #001858;
+}
+
+#hamburger {
+  display: none;
+}
+
+/* Ukuran */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+    transition: 0.3s;
+  }
+}
+
+/* Bagian Biography */
+.bio {
+  margin-top: 6rem;
+  padding-left: 18rem;
+  z-index: 10;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.bio img {
+  width: 15rem;
+}
+.about {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../image/HD\ wallpaper_\ Marshmellow\ costume\,\ Marshmello\ \,\ DJ\,\ Monstercat\,\ musician\,\ full\ length\ \(1\)\ 1.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  z-index: -1;
+}
+
+.about p {
+  margin-top: 111px;
+  position: fixed;
+  text-align: left;
+  width: 100%;
+  font-size: 1.1rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-left: 20px;
+}
+
+.pcontact {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../image/HD\ wallpaper_\ Marshmellow\ costume\,\ Marshmello\ \,\ DJ\,\ Monstercat\,\ musician\,\ full\ length\ \(1\)\ 1.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  z-index: -1;
+}
+
+.pcontact p {
+  margin-top: 250px;
+  position: fixed;
+  text-align: center;
+  text-align: left;
+  width: 100%;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-left: 20px;
+}
+
+.email p {
+  margin-top: 410px;
+  position: fixed;
+  text-align: left;
+  width: 100%;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #284e7e;
+  font-weight: 700;
+  transform: translateX(-50%);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 52.5%;
+    transition: 0.3s;
+  }
+  #hamburger {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #001858;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 500px) {
+  html {
+    font-size: 40%;
+    transition: 0.3s;
+  }
+  #hamburger {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #001858;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover:after {
+    transform-origin: 0 0;
+    transform: scaleX(0.3);
+  }
+}
